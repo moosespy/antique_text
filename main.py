@@ -36,6 +36,9 @@ if room == 1:
     time.sleep(1)
     scroll("You've woken up in a street. You don't know who you are, only that your head hurts slightly.")
     scroll("Your clothing seems expensive, but ripped. There's a nametag on it.")
+    scroll("You are well-dressed, well-groomed, and you have a watch. Your boots are expensive and your coat is well-made.")
+    scroll("There is a brass key, a theatre ticket, and a shopping list in your pockets. The list has absurdly expensive biscuits on it. ")
+    scroll("Evidently, you are someone of excellent taste.")
     scroll("There's a man standing over you. He has a grand mustache, and his arms are crossed.")
     scroll("He frowns. 'Well, this is a mystery! It's too bad Sherlock's not here, he would instantly know where you're from.'")
     scroll("His eyes grow sad. 'He always could instantly solve those things about where you came from.'")
@@ -59,6 +62,7 @@ if room == 2:
     scroll("'But again, who are you?'")
     scroll("You shrug helplessly. 'I don't know,' you respond.")
     scroll("Watson stares at you. 'A true mystery! You are an amnesiac, then - you have lost your memory entirely!'")
+    scroll("He examines you. 'You appear to have suffered a blow to the head.'")
     scroll("'Well, I suppose I should tell you what I am doing. Holmes is missing,' Watson sighs.")
     scroll("'There is something truly amiss here. I am following a lead on Holmes, and I cannot seem to figure out what happened.'")
     scroll("'You should accompany me. When I find Holmes, he will be able to deduce your identity, I am sure of it.'")
@@ -80,7 +84,9 @@ if room == 3:
     scroll("You and Watson decide the best place to start is Holmes' home - 221B Baker Street.")
     scroll("You walk over, with Watson occasionally asking the occasional question to attempt to trigger your memory.")
     scroll("Nothing works, sadly, and Watson has just given up when you round the corner and see the apartment.")
-    scroll("You enter 221B Baker Street and start looking around. Nothing pops out, until Watson shouts 'A-ha!'")
+    scroll("You enter 221B Baker Street and start looking around. You feel oddly comfortable in the room.")
+    scroll("A magnifying glass")
+    scroll("Nothing pops out, until Watson shouts 'A-ha!'")
     scroll("You turn around and see Watson holding a book. The book itself is nothing special - it's about certain legal cases - but there is a note inside of it.")
     scroll("Watson takes the note out and reads: 'The records are incomplete. Ask the former secretary what became of the original.'")
     scroll("This doesn't mean much to you, but Watson is excited.")
@@ -116,3 +122,19 @@ if room == 4:
     question()
     if cont == 2:
         room = 5
+if room == 5:
+    scroll("'Wait!' you cry at Watson. To Mrs. Hudson, you say, 'Is there anything else?'")
+    scroll("'Why yes!' she beams. 'I also have a letter from him here. He sent it, but it was returned to the original address, which happened to get to me!'")
+    scroll("You take the letter. It's addressed to someone named Herbert Taylor.")
+    scroll("You pocket the letter. 'Anything else?'")
+    scroll("Mrs. Hudson blinks. 'You want more? I can try to remember, but I don't know right now.'")
+    scroll("You thank her and race after Watson.")
+    print()
+    room = 6
+if room == 6:
+    scroll("As you catch up to Watson, he's panting, and pointing at the building in front of you.")
+    scroll("'That's the stationer's,' he says. 'Maybe you go in first... I'm a bit tired.'")
+    scroll("You walk in, and immediately you get the sensation that you've been here.")
+    scroll("That sensation is immediately amplified by the fact that there is an engraving on a piece of paper - the same one on your watch!")
+    
+#notes: r
