@@ -119,4 +119,11 @@ if room == 4:
     scroll("You instinctively arrange them by subject, and then discover that you have placed several books exactly where their owner remembers keeping them years before.")
     scroll("You get a sense of recognition, then it disappears.")
     scroll("You notice that the household's routines have changed, helping discover that the document was accidentally misplaced in one of the library books.")
-    scroll("Among the papers, you find a note written by Holmes. His")
+    scroll("Among the papers, you find a note written by Holmes. His handwriting sparks a memory of working at a desk with someone nearby.")
+    scroll("You suspect you have met him before.")
+    print()
+    scroll("Watson learns that Holmes was last seem at a country inn.")
+    scroll("As you travel there, fragments of life start coming back: a writing desk, a train journey, someone calling your name.")
+    scroll("Watson finds Holmes sitting peacefully in the inn's garden, reading a newspaper and eating biscuits. Watson is relieved but furious that Holmes has beeen away so long.")
+    scroll("Holmes examines you and tells you that you are a young solicitor who had been helping organize papers connected to the original case.")
+    
