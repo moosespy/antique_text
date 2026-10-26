@@ -62,20 +62,20 @@ if room == 2:
     scroll("'Well, I suppose I should tell you what I am doing. Holmes is missing,' Watson sighs.")
     scroll("'There is something truly amiss here. I am following a lead on Holmes, and I cannot seem to figure out what happened.'")
     scroll("'You should accompany me. When I find Holmes, he will be able to deduce your identity, I am sure of it.'")
-    scroll("You sit down at a table and think about it.")
+    scroll("You sit down at a table and think about it, as Watson orders you some tea.")
     print()
     scroll("To accompany Watson, press 1.")
     question()
     if cont == 1:
         room = 3
 if room == 3:
-    scroll("You agree to accompany Watson. He looks pleased, and you both sit up.")
+    scroll("You agree to accompany Watson. He looks pleased, and you both sit up, tea in hand.")
     scroll("As you do, a pocket watch falls out of your pocket. You grab it and put it back into your pocket.")
     scroll("Watson grabs it back. 'There's an engraving on this I've never seen before!'")
     scroll("You turn it around. Sure enough, an engraving is on the back. You've also never seen it before.")
     scroll("Watson looks interested. 'Do you have any idea what this could be?'")
     scroll("You shake your head. 'No idea,' you say.")
-    scroll("It seems like it could be important, but perhaps not. You follow Watson out of the cafe.")
+    scroll("It seems like it could be important, but perhaps not. You follow Watson out of the cafe, throwing out the tea. It tastes horrible.")
     print()
     scroll("You and Watson decide the best place to start is Holmes' home - 221B Baker Street.")
     scroll("You walk over, with Watson occasionally asking the occasional question to attempt to trigger your memory.")
@@ -86,4 +86,16 @@ if room == 3:
     scroll("This doesn't mean much to you, but Watson is excited.")
     scroll("He explains that Holmes had recently been investigating an old collection of legal documents of some sort.")
     scroll("What's curious is that you actually seem to recognize Holmes' handwriting. You guess that you must have seen it around when in his study and you are already used to it.")
-    
+    print()
+    scroll("Watson smiles. 'Shall we go to a public records office, then? That will allow us to find what records Holmes was looking for.'")
+    scroll("'Or shall we keep looking for clues here?'")
+    print()
+    scroll("To go to a public records office, press 1.")
+    question()
+    if cont == 1:
+        room = 4
+if room == 4:
+    scroll("You decide to walk to a public records office. There should be clues there about the records.")
+    scroll("At the office, you locate an old register. It lists the people who handled the documents Holmes was investigating.")
+    scroll("Several names have been recorded, but one of the entries appears to be crossed out.")
+    scroll("Beside it is a note -")
