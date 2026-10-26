@@ -20,9 +20,11 @@ def question():
             x = int(input())
             if x == 1:
                 cont = 1
+                clear_screen()
                 break
             elif x == 2:
                 cont = 2
+                clear_screen()
                 break
             else:
                 scroll("Invalid input. Try again!")
@@ -71,3 +73,17 @@ if room == 3:
     scroll("As you do, a pocket watch falls out of your pocket. You grab it and put it back into your pocket.")
     scroll("Watson grabs it back. 'There's an engraving on this I've never seen before!'")
     scroll("You turn it around. Sure enough, an engraving is on the back. You've also never seen it before.")
+    scroll("Watson looks interested. 'Do you have any idea what this could be?'")
+    scroll("You shake your head. 'No idea,' you say.")
+    scroll("It seems like it could be important, but perhaps not. You follow Watson out of the cafe.")
+    print()
+    scroll("You and Watson decide the best place to start is Holmes' home - 221B Baker Street.")
+    scroll("You walk over, with Watson occasionally asking the occasional question to attempt to trigger your memory.")
+    scroll("Nothing works, sadly, and Watson has just given up when you round the corner and see the apartment.")
+    scroll("You enter 221B Baker Street and start looking around. Nothing pops out, until Watson shouts 'A-ha!'")
+    scroll("You turn around and see Watson holding a book. The book itself is nothing special - it's about certain legal cases - but there is a note inside of it.")
+    scroll("Watson takes the note out and reads: 'The records are incomplete. Ask the former secretary what became of the original.'")
+    scroll("This doesn't mean much to you, but Watson is excited.")
+    scroll("He explains that Holmes had recently been investigating an old collection of legal documents of some sort.")
+    scroll("What's curious is that you actually seem to recognize Holmes' handwriting. You guess that you must have seen it around when in his study and you are already used to it.")
+    
