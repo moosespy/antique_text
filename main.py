@@ -108,6 +108,7 @@ if room == 4:
     print()
     scroll("At the gentlemen's club, you are mistaken for an expected guest and ushered into a private dining room.")
     scroll("Three elderly gentlemen come up to you and discuss horse racing.")
+    scroll("You seem to be well-respected, although no one else seems to notice that you yourself cannot remember things.")
     scroll("You begin to suspect that you may have visited places like this frequently.")
     print()
     scroll("You visit a theatre mentioned in Holmes's notes. The manager greets you like an old acquaintance, then realizes you don't remember him.")
@@ -156,10 +157,10 @@ if room == 1000:
         room = 10000
 if room == 1001:
     scroll("You decide to try to find out what happened to you.")
-    scroll("You look around.")
+    scroll("You look around. You are in the middle of a sidewalk. To your left stands a train station. To your right is a cafe. Ahead is the long road in what you presume to be London.")
 if room == 10000:
     scroll("You decide to start a new life. By the looks of it, you were rich and maybe a bit greedy - this is a chance to start over.")
     scroll("You go up to a nearby store and walk in. The cashier looks at you. 'What do you need,' she asks?")
-    scroll("'Can I get a job, please?'")
+    scroll("You consider going back, but you shake off that instinct. 'Can I get a job, please?'")
     print()
     scroll('The End')
