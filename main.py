@@ -6,7 +6,7 @@ inventory = []
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def scroll(text, delay=0.0):
+def scroll(text, delay=0.02):
     print(end="", flush=True)
     for char in text:
         print(char, end="", flush=True)
@@ -97,9 +97,12 @@ if room == 3:
     scroll("You offer your help to Watson, since you have nothing better to do, and out of gratitude.")
     scroll("You begin to hope that you may be a detective yourself.")
     scroll("To follow Watson around London, press 1.")
+    scroll("To look further around 221B Baker Street first, press 2.")
     question()
     if cont == 1:
         room = 4
+    if cont == 2:
+        room = 400
 if room == 4:
     scroll("Watson says that the places Holmes was last seen were a bookshop, a tobacconist, a railway station, and a gentlemen's club.")
     scroll("You discover, as you go to these places, that you are surprisingly good at noticing things.")
@@ -135,11 +138,12 @@ if room == 4:
     scroll("Watson learns that Holmes was last seen at a country inn.")
     scroll("As you travel there, fragments of life start coming back: a writing desk, a train journey, someone calling your name.")
     scroll("Watson finds Holmes sitting peacefully in the inn's garden, reading a newspaper and eating biscuits.")
-    scroll("Watson is relieved but furious that Holmes has beeen away so long and didn't tell him why. Holmes is bemused.")
+    scroll("Watson is relieved but furious that Holmes has beeen away so long and didn't tell him why. Holmes is bemused, as he's certain he left a note somewhere near his violin.")
     scroll("After Holmes sees you, he asks you a few questions to help you figure out your identity.")
     scroll("Holmes examines you and tells you that you are a young solicitor who had been helping organize papers connected to the original case.")
-    scroll("He pulls out a newspaper and shows you the article. You were walking from the train when you fell and hit your head, losing your memory.")
-    scroll("He smiles. 'You are perfectly fine. And I may have a case that you can help me with later, if needed. Your detective skills are fair, if anything.")
+    scroll("He pulls out a newspaper and shows you the article. Your name is Herbert Taylor. ")
+    scroll("You were walking from the train station when you fell and hit your head, losing your memory.")
+    scroll("He smiles. 'You are perfectly fine, now. And I may have a case that you can help me with later, if needed. Your detective skills are fair, if anything.")
     scroll("Grinning, you say that you'll think about it, but as you walk away, you know that of course you'll say yes.")
     scroll("After all, who doesn't want a chance to work on a case with the great Sherlock Holmes?")
     print()
@@ -155,9 +159,54 @@ if room == 1000:
         room = 1001
     elif cont == 2:
         room = 10000
+if room == 400:
+    scroll("You decide to look further around the apartment first, to see if you can find anything.")
+    scroll("Watson insists that there is nothing, but you have to know. Watson sighs and leaves for the rest of London.")
+    scroll("A few minutes after Watson leaves, you find a note stuck to Holmes's violin case.")
+    scroll("It says that he has left to solve the case, and tthat afterwards, he will be staying at a country inn to relax if Watson needs him.")
+    scroll("The note gives the address of the country inn.")
+    scroll("You decide to go to the address to meet with Holmes.")
+    print()
+    scroll("The country inn is small and peaceful. There's a garden with tables, and a man sitting at one of them, eating biscuits and reading his newspaper.")
+    scroll("Inside the inn, a man, presumably the manager, is sitting at a desk, looking bored. You can't see anyone else inside.")
+    print()
+    scroll("To talk to the manager, press 1.")
+    scroll("To go to the man in the garden, press 2.")
+    question()
+    if cont == 1:
+        room = 401
+    elif cont == 2:
+        room = 402
+if room == 401:
+    scroll("You go inside, and ask the manager if someone is staying here by the name of Holmes. The manager tells you that he can't give you that information.")
+    scroll("Frustrated, you go outside. The man is still there. You decide you may as well talk to him.")
+    print()
+    room = 402
+if room == 402:
+    scroll("You go up to the man in the garden. He looks up at you, and smiles. 'You're Herbert Taylor.' It's not a question.")
+    scroll("Shocked, you step back. 'How do you know?'")
+    scroll("The man smiles, and points to the newspaper. It shows that you were walking from a train station, when you fell down, apparently losing your memory.")
+    scroll("You know this must be Sherlock Holmes. Not many people could identify you just by looking at a newspaper.")
+    scroll("When you say this to him, he looks a bit surprised. 'How do you know me, and where I was?'")
+    scroll("You hesitate. Should you tell him that you were with Watson?")
+    print()
+    scroll("You decide to tell him, to avoid any suspicion. 'I was with Watson. He found me and took me to your apartment. I found your note.'")
+    scroll("Holmes smiles, tension gone from his face. 'Ah, Watson. Where is he now?'")
+    scroll("You cringe. 'Um... looking around London for you. He didn't want to wait for me looking around the apartment some more.'")
+    scroll("Holmes blinks, then laughs. 'He will find me eventually, if he follows the clues well enough. I will stay here, and as for you, I suggest that you leave and find your old family. Take this newspaper and read about yourself - you should be able to figure it out.")
+    scroll("You thank Holmes, and after saying goodbye, leave the inn. You smile, knowing that Holmes was safe. Only after you get back to your old family do you realize that you don't know if the case Holmes was working on was solved...")
+    print()
+    scroll('The End')
+
 if room == 1001:
     scroll("You decide to try to find out what happened to you.")
     scroll("You look around. You are in the middle of a sidewalk. To your left stands a train station. To your right is a cafe. Ahead is the long road in what you presume to be London.")
+    scroll("You look down, and see what are probably your footprints coming from... the train station.")
+    scroll("So obviously you came from the train station, right?")
+    scroll("To go to the train station, press 1.")
+    scroll("To study yourself and your belongings, press 2.")
+    question()
+    scroll("You decide to look at yourself some more. For example, the key.")
 if room == 10000:
     scroll("You decide to start a new life. By the looks of it, you were rich and maybe a bit greedy - this is a chance to start over.")
     scroll("You go up to a nearby store and walk in. The cashier looks at you. 'What do you need,' she asks?")
