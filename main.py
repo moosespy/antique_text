@@ -37,8 +37,7 @@ if room == 1:
     scroll("You've woken up in a street. You don't know who you are, only that your head hurts slightly.")
     scroll("Your clothing seems expensive, but ripped. There's a nametag on it.")
     scroll("You are well-dressed, well-groomed, and you have a watch. Your boots are expensive and your coat is well-made.")
-    scroll("There is a brass key, a theatre ticket, and a shopping list in your pockets. The list has absurdly expensive biscuits on it. ")
-    scroll("Evidently, you are someone of excellent taste.")
+    scroll("There is a brass key, a theatre ticket, and a piece of paper in your pockets.")
     scroll("There's a man standing over you. He has a grand mustache, and his arms are crossed.")
     scroll("He frowns. 'Well, this is a mystery! It's too bad Sherlock's not here, he would instantly know where you're from.'")
     scroll("His eyes grow sad. 'He always could instantly solve those things about where you came from.'")
@@ -64,6 +63,7 @@ if room == 2:
     scroll("'I'm Sherlock Holmes' best friend and confidant, as well as the person who logs his work!'")
     scroll("'But again, who are you?' he asks.")
     scroll("You shrug helplessly. 'I don't know,' you respond.")
+    print()
     scroll("Watson stares at you. 'A true mystery! You are an amnesiac, then - you have lost your memory entirely!'")
     scroll("He examines you. 'You appear to have suffered a blow to the head.'")
     scroll("'Well, I suppose I should tell you what I am doing. Holmes is missing,' Watson sighs.")
@@ -104,7 +104,7 @@ if room == 3:
     if cont == 2:
         room = 400
 if room == 4:
-    scroll("Watson says that the places Holmes was last seen were a bookshop, a tobacconist, a railway station, and a gentlemen's club.")
+    scroll("Watson says that the places he remembers Holmes going to were a gentlemen's club.")
     scroll("You discover, as you go to these places, that you are surprisingly good at noticing things.")
     scroll("You can tell which customers have been waiting longest, which shopkeepers are distracted, and other small details.")
     scroll("Unfortunately, you still can't remember your own name.")
@@ -121,8 +121,8 @@ if room == 4:
     scroll("She remarks that you was once very particular about the arrangement of books and papers.")
     scroll("Watson looks at you with renewed interest. Apparently you were an intellectual!")
     print()
-    scroll("During a rest at an inn, you examine your possessions more thoroughly.")
-    scroll("The brass key appears to fit a small, well-made lock. The theatre ticket bears a date from the previous week. The shopping list is written in a familiar-looking hand.")
+    scroll("You examine your possessions more thoroughly.")
+    scroll("The brass key appears to fit a small, well-made lock, and it has an address on it! The theatre ticket bears a date from the previous week, and is to the theatre you are in now.. The reciept is from a place called Little Samson.")
     scroll("Watson suggests that the key is most likely for your home or office. You delight in the idea that you may have an office.")
     print()
     scroll("Following a clue from Holmes's notes, you follow Watson into the countryside to investigate the missing inheritance document.")
@@ -135,7 +135,7 @@ if room == 4:
     scroll("Among the papers, you find a note written by Holmes. His handwriting sparks a memory of working at a desk with someone nearby.")
     scroll("You suspect you have met him before.")
     print()
-    scroll("Watson learns that Holmes was last seen at a country inn.")
+    scroll("Watson learns from the librarian that Holmes went to a country inn.")
     scroll("As you travel there, fragments of life start coming back: a writing desk, a train journey, someone calling your name.")
     scroll("Watson finds Holmes sitting peacefully in the inn's garden, reading a newspaper and eating biscuits.")
     scroll("Watson is relieved but furious that Holmes has beeen away so long and didn't tell him why. Holmes is bemused, as he's certain he left a note somewhere near his violin.")
@@ -200,16 +200,25 @@ if room == 402:
 
 if room == 1001:
     scroll("You decide to try to find out what happened to you.")
-    scroll("You look around. You are in the middle of a sidewalk. To your left stands a train station. To your right is a cafe. Ahead is the long road in what you presume to be London.")
+    scroll("You look around. You are in the middle of a sidewalk. To your left stands a train station. To your right is the cafe. Ahead is the long road in what you presume to be London, with many shops and buildings.")
     scroll("You look down, and see what are probably your footprints coming from... the train station.")
     scroll("So obviously you came from the train station, right?")
     scroll("To go to the train station, press 1.")
-    scroll("To study yourself and your belongings, press 2.")
+    scroll("To examine yourself and your belongings, press 2.")
     question()
-    scroll("You decide to look at yourself some more. For example, the key.")
+    if cont == 1:
+        room == 1002
+    elif cont == 2:
+        room == 1010
+if room == 1010:
+    scroll("You decide to look at yourself and your belongings some more.")
+    scroll("You start with the piece of paper. It turns out to be a reciept from a store called Little Samson, although the only items on it are a brand of biscuits you haven't really heard of - Moose Spy Biscuits.")
+    scroll("They are quite expensive, as it turns out. You seem to have been very, very well-off.")
+    scroll("Next, the theatre ticket. It's to The Merchant of Venice, a Shakespeare play, well-known, although somehow, you remember having mixed feelings about it... it was held one week ago.")
+    scroll("Finally, the key")
 if room == 10000:
     scroll("You decide to start a new life. By the looks of it, you were rich and maybe a bit greedy - this is a chance to start over.")
-    scroll("You go up to a nearby store and walk in. The cashier looks at you. 'What do you need,' she asks?")
+    scroll("You go up to a nearby store, Little Samson, and walk in. The cashier looks at you. 'What do you need?' she asks.")
     scroll("You consider going back, but you shake off that instinct. 'Can I get a job, please?'")
     print()
     scroll('The End')
