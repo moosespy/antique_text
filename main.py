@@ -104,25 +104,12 @@ if room == 3:
     if cont == 2:
         room = 400
 if room == 4:
-    scroll("Watson says that the places he remembers Holmes going to were a gentlemen's club.")
-    scroll("You discover, as you go to these places, that you are surprisingly good at noticing things.")
-    scroll("You can tell which customers have been waiting longest, which shopkeepers are distracted, and other small details.")
-    scroll("Unfortunately, you still can't remember your own name.")
+    scroll("Watson says that the place he remembers Holmes going to was the countryside estate.")
     print()
-    scroll("At the gentlemen's club, you are mistaken for an expected guest and ushered into a private dining room.")
-    scroll("Three elderly gentlemen come up to you and discuss horse racing.")
-    scroll("You seem to be well-respected, although no one else seems to notice that you yourself cannot remember things.")
-    scroll("You begin to suspect that you may have visited places like this frequently.")
-    print()
-    scroll("You visit a theatre mentioned in Holmes's notes. The manager greets you like an old acquaintance, then realizes you don't remember him.")
-    scroll("An actress remembers that you had once helped recover a necklace that she had lost.")
-    scroll("This delights you, as this means that your former identity was useful.")
-    scroll("The actress also recalls that Holmes had been asking questions about a missing document and a country house.")
-    scroll("She remarks that you was once very particular about the arrangement of books and papers.")
-    scroll("Watson looks at you with renewed interest. Apparently you were an intellectual!")
-    print()
-    scroll("You examine your possessions more thoroughly.")
-    scroll("The brass key appears to fit a small, well-made lock, and it has an address on it! The theatre ticket bears a date from the previous week, and is to the theatre you are in now.. The reciept is from a place called Little Samson.")
+    scroll("As you go there, you examine your possessions more thoroughly.")
+    scroll("The brass key appears to fit a small, well-made lock, and it has an address on it, although it's smudged. ")
+    scroll("The theatre ticket bears a date from the previous week, and is to the theatre you are in now.. ")
+    scroll("The reciept is from a place called Little Samson.")
     scroll("Watson suggests that the key is most likely for your home or office. You delight in the idea that you may have an office.")
     print()
     scroll("Following a clue from Holmes's notes, you follow Watson into the countryside to investigate the missing inheritance document.")
@@ -152,12 +139,12 @@ if room == 1000:
     scroll("Politely, you turn him down on his offer, and walk away. He looks a bit surprised but allows you to leave without question.")
     scroll("As you walk away, you now have to decide what to do.")
     scroll("You have a few choices.")
-    scroll("To try to find out what happened to you, press 1.")
+    #scroll("To try to find out what happened to you, press 1.")
     scroll("To start a new life, press 2.")
     question()
-    if cont == 1:
-        room = 1001
-    elif cont == 2:
+    #if cont == 1:
+        #room = 1001
+    if cont == 2:
         room = 10000
 if room == 400:
     scroll("You decide to look further around the apartment first, to see if you can find anything.")
@@ -215,7 +202,19 @@ if room == 1010:
     scroll("You start with the piece of paper. It turns out to be a reciept from a store called Little Samson, although the only items on it are a brand of biscuits you haven't really heard of - Moose Spy Biscuits.")
     scroll("They are quite expensive, as it turns out. You seem to have been very, very well-off.")
     scroll("Next, the theatre ticket. It's to The Merchant of Venice, a Shakespeare play, well-known, although somehow, you remember having mixed feelings about it... it was held one week ago.")
-    scroll("Finally, the key")
+    scroll("Finally, the key, which seems... to have an address on it! It most likely is a home or office key, and you love the idea that you have your own office. The address is smudged, though, and unreadable.")
+    scroll("To go to Little Samson, press 1.")
+    scroll("To go to the theatre, press 2.")
+    question()
+    if cont == 1:
+        room == 1011
+    elif cont == 2:
+        room == 1021
+if room == 1021:
+    scroll("You visit the theatre. The manager greets you like an old acquaintance, then realizes that you can't remember him, blushing.")
+    scroll("As you look around the theatre, you ask if you were ever here before. The manager smiles. 'All the time!'")
+    scroll("His smile fades, and he looks a bit worried. 'Do you need to see a doctor? You have amnesia of some sort, that's clear.'")
+    scroll("You tell ")
 if room == 10000:
     scroll("You decide to start a new life. By the looks of it, you were rich and maybe a bit greedy - this is a chance to start over.")
     scroll("You go up to a nearby store, Little Samson, and walk in. The cashier looks at you. 'What do you need?' she asks.")
