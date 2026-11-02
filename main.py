@@ -49,6 +49,10 @@ def question():
 watson_pos = [0, 0]
 intro = 1
 while 1:
+    if room == [-2, 0]:
+        scroll("You try to enter the estate, but the gate is locked.")
+        print()
+        room == [-1, 0]
     if room == [-1, 0]:
         scroll("You are on a road. A grand estate is to the west.")
         scroll("Current position: Road")
@@ -107,7 +111,7 @@ while 1:
             scroll("Watson gives you a key. He says to go to 221B Baker Street with it.")
             inventory.append('holmes_key')
         else:
-            scroll("You decide to sit down and relax.")
+            scroll("You decide to sit down and relax. The cafe rings out with conversation, and it's a very nice environment.")
             scroll("In fact, maybe you should look through your pockets and such to see if there are any clues towards yourself.")
             scroll("You find a shopping list, a small brass key, and a theatre ticket.")
             scroll("The shopping list is to Little Samson, and the key has an office number on it. The theatre ticket is for today, to 'The Merchant of Venice'.")
@@ -120,8 +124,22 @@ while 1:
         question()
     if room == [0, -1]:
         scroll("You are in Little Samson. There is a cashier, who looks up briefly as you walk in.")
+        if 'shopping_list' in inventory:
+            scroll("You don't really know what to do now, so you pull out your shopping list and decide to shop for a bit.")
+            scroll("You look at it closer. Why are there 10 different flavors of biscuits on here? You really loved them or something...")
+            scroll("Either way, you decide to buy them. Maybe there is a reason for these biscuits.")
+            scroll("You find the biscuits and buy them. At the cash register, the cashier takes the biscuits and stares at them. \033[33m'You're the second person this week who bought these!'\033[0m")
+            scroll("You blink. 'The second person? Who was the first?'")
+            scroll("She rolls her eyes. 'That hotel manager, Herbert Taylor. Similar-looking to you, now that I think of it.'")
+            scroll("She squints at you. 'Actually... it is you, isn't it. You ran out of biscuits the first time, is that it? I'm not complaining, though, you're the only one that buys these things.'")
+            scroll("She hands you back the money, and dazed, you stumble out of the shop.")
+            scroll("At least you know who you are now... and that's the important part, you guess...")
+            print()
+            scroll("The End")
+            break
         scroll("Current position: Little Samson")
         scroll("North: Road")
+        question()
     if room == [1, 0]:
         scroll("You are on a road. To the north is an apartment, to the south is a theatre, to the east is a country inn, and to the west is a road.")
         scroll("Current position: Road")
@@ -134,7 +152,7 @@ while 1:
     if room == [1, 1]:
         if 'holmes_key' in inventory:
             scroll("You use the key Watson gave you to get into Holmes's home - 221B Baker Street.")
-            scroll("There is a magnifying glass and a collection of labelled specimens that give off an odd feeling of familiarity.")
+            scroll("There is a magnifying glass and a collection of labelled specimens that you quite like. They remind you of something.")
             scroll("There is a violin case on the floor, but otherwise the apartment is quite neat.")
             print()
             scroll("You pick up the violin case, and you gasp in shock. There is a note on it!")
@@ -148,7 +166,7 @@ while 1:
         else:
             scroll("The door is locked.")
             print()
-            roon = (1, 0)
+            room = (1, 0)
     if room == [1, -1]:
         scroll("You go up to the theatre.")
         scroll("A woman is collecting tickets, looking bored. \033[33m'Ticket, please,'\033[0m she says.")
@@ -163,7 +181,9 @@ while 1:
             print()
             scroll("The End")
             break
-        room == [1, 0]
+        else:
+            scroll("You walk away, mumbling about not having a ticket.")
+            room == [1, 0]
     if room == [2, 0]:
         scroll("The country inn is small and peaceful. There's a garden with tables to the south, and a man sitting at one of them, eating biscuits and reading his newspaper.")
         scroll("Inside the actual inn itself, to the east, a man, presumably the manager, is sitting at a desk, looking bored. You can't see anyone else inside.")
@@ -178,9 +198,26 @@ while 1:
         if holmes_note in inventory:
             scroll("You go inside the inn.")
             scroll("You ask the manager of the inn if someone is staying here by the name of Holmes.")
-            scroll("The manager says he can't give you that information, and asks you to leave.")
+            scroll("The manager looks stressed. He says he can't give you that information, and asks you to leave.")
+            scroll("He doesn't even look up at you as he sorts through a pile of paperwork, mumbling about a missing key.")
+            print()
+            if 'office_key' in inventory:
+                scroll("You blink, and then realize something. You have an office key, in your pocket. It may be the one he is looking for!")
+                scroll("You take out the key. 'Excuse me, do you need this, sir?'")
+                scroll("He glances briefly, then looks down. 'Probably not, sorry - wait, is that...'")
+                scroll("He looks at you sharply. 'Herbert Taylor! Where did you come from? Didn't you disappear?'")
+                scroll("You look at him, surprised. 'Did I know you?'")
+                scroll("He looks shocked. 'Do you not remember me? I'm your assistant manager! You're the manager here!'")
+                scroll("He smiles suddenly. 'If you are back... maybe that is the key! And I don't have to deal with all this!'")
+                scroll("You hold out the key, and he grabs it and goes to a locked door. He opens it easily, sighing with relief. 'Well, this is all your problem now. I'm taking a break.'")
+                scroll("He leaves without further conversation, leaving you with a pile of paperwork and an job in an office as something you don't know how to do...")
+                print()
+                scroll("The End") 
+                break
         else:
             scroll("The inn is peaceful inside, with artwork surrounding... everywhere.")
+            scroll("THe manager looks stressed, with a pile of paperwork on his desk, mumbling something indecipherable.")
+            print()
         scroll("Current position: Country Inn Building")
         scroll("West: Country Inn Entrance")
         n, e, s, w = False, False, False, True
