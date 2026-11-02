@@ -6,7 +6,7 @@ stay = 0
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def scroll(text, delay=0.0):
+def scroll(text, delay=0.02):
     print(end="", flush=True)
     for char in text:
         print(char, end="", flush=True)
@@ -129,9 +129,9 @@ while 1:
             scroll("You look at it closer. Why are there 10 different flavors of biscuits on here? You really loved them or something...")
             scroll("Either way, you decide to buy them. Maybe there is a reason for these biscuits.")
             scroll("You find the biscuits and buy them. At the cash register, the cashier takes the biscuits and stares at them. \033[33m'You're the second person this week who bought these!'\033[0m")
-            scroll("You blink. 'The second person? Who was the first?'")
-            scroll("She rolls her eyes. 'That hotel manager, Herbert Taylor. Similar-looking to you, now that I think of it.'")
-            scroll("She squints at you. 'Actually... it is you, isn't it. You ran out of biscuits the first time, is that it? I'm not complaining, though, you're the only one that buys these things.'")
+            scroll("You blink. \033[31m'The second person? Who was the first?'\033[0m")
+            scroll("She rolls her eyes. \033[33m'That hotel manager, Herbert Taylor. Similar-looking to you, now that I think of it.'\033[0m")
+            scroll("She squints at you. \033[33m'Actually... it is you, isn't it. You ran out of biscuits the first time, is that it? I'm not complaining, though, you're the only one that buys these things.'\033[0m")
             scroll("She hands you back the money, and dazed, you stumble out of the shop.")
             scroll("At least you know who you are now... and that's the important part, you guess...")
             print()
