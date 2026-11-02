@@ -115,7 +115,7 @@ while 1:
             scroll("In fact, maybe you should look through your pockets and such to see if there are any clues towards yourself.")
             scroll("You find a shopping list, a small brass key, and a theatre ticket.")
             scroll("The shopping list is to Little Samson, and the key has an office number on it. The theatre ticket is for today, to 'The Merchant of Venice'.")
-            inventory.append('shoppping_list')
+            inventory.append('shopping_list')
             inventory.append('office_key')
             inventory.append('theatre_ticket')
         scroll("Current position: Cafe")
@@ -195,7 +195,7 @@ while 1:
         n, e, s, w = False, True, True, True
         question()
     if room == [3, 0]:
-        if holmes_note in inventory:
+        if 'holmes_note' in inventory:
             scroll("You go inside the inn.")
             scroll("You ask the manager of the inn if someone is staying here by the name of Holmes.")
             scroll("The manager looks stressed. He says he can't give you that information, and asks you to leave.")
@@ -223,7 +223,7 @@ while 1:
         n, e, s, w = False, False, False, True
         question()
     if room == [2, -1]:
-        if holmes_note in inventory:
+        if 'holmes_note' in inventory:
             scroll(f"You enter the gardens. The man sitting at the table looks up at you, as you approach him. \033[31m'Hello, sorry to disturb you - '\033[0m")
             scroll(f"The man smiles. \033[33m'You're Herbert Taylor.' \033[0mIt's not a question.")
             scroll("Shocked, you step back. \033[31m'How do you know?'\033[0m")
