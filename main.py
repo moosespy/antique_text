@@ -58,6 +58,7 @@ while 1:
         scroll("Current position: Road")
         scroll("East: Road")
         scroll("West: Estate")
+        question()
     if room == [0, 0]:
         if intro == 0:
             scroll("You are in the middle of a London street. A cafe is north, a grocery store (Little Samson) is south, and to your west and east is the road.")
